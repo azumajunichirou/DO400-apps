@@ -66,14 +66,14 @@ public void removingTheOnlyProductInCartReturns204() {
 
 @Test 
 public void
-removingProductFromCartContainingMultipleAndDifferentProductsReturns200() {
-    this.addProductToTheCartWithIdAndRandomQuantity(1);
-    this.addProductToTheCartWithIdAndRandomQuantity(2);
+    removingProductFromCartContainingMultipleAndDifferentProductsReturns200() {
+        this.addProductToTheCartWithIdAndRandomQuantity(1);
+        this.addProductToTheCartWithIdAndRandomQuantity(2);
         
-    given()
-        .pathParam("id", 1)
-    .when()
-        .delete("/cart/products/{id}")
-    .then()
-        .statusCode(200);
+        given()
+            .pathParam("id", 1)
+        .when()
+            .delete("/cart/products/{id}")
+        .then()
+            .statusCode(200);
 }
